@@ -1,0 +1,149 @@
+.form{
+    position: absolute;
+    left: 50%;
+    top: 23em;
+    transform: translate(-50%,-50%);
+    width: 43%;
+    box-shadow: 0 0px 10px 5px #2c7e82;
+    border-radius: 2px;
+    padding: 20px 30px;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+}
+
+label span {
+    color: white;
+}
+
+label .input{
+    width: 300px;
+    background-color: #8bc9d3;
+    border: none;
+    border-radius: 3px;
+    color: #191a1b;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 3px 7px;
+    font-weight: bold;
+}
+
+label .input:hover{
+    background-color: #89d3df ;
+}
+
+label .inputResume{
+    height: 100px;
+}
+
+label .centerInput{
+    text-align: center;
+}
+
+.labelSelect{
+    justify-content: flex-start;
+    
+}
+
+label .inputSelect{
+    width: 200px;
+    margin-left: 126px;
+}
+label .inputSelect2{
+    width: 200px;
+    margin-left: 155px;
+}
+
+.linkAjouterSelect{
+    width: 110px;
+    font-size: 13px;
+    text-align: center;
+    margin-left: 10px;
+    background: #67afba;
+    border-radius: 3px;
+    padding: 3px 5px 5px 5px;
+    color: #338285;
+}
+
+.linkAjouterSelect:hover{
+    background: #000000cc;
+    color: #a0602f; 
+    transition: .3s ease;
+    text-shadow: black 1px 1px 1px;
+    font-weight: bold;
+}
+
+textarea{
+    resize: none;
+}
+
+.link-showForm{
+    position: fixed;
+    left: 90%;
+    top: 80%;
+    transform: translate(-50%,-50%); 
+    background: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: rgb(61, 61, 61);
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.link-showForm:hover{
+    background: #000000cc;
+    color: #a0602f; 
+    transition: .3s ease;
+    text-shadow: black 1px 1px 1px;
+}
+
+/*.addFilmAfterDir{
+    padding: 3px 7px 5px 7px;
+    font-size: 13px;
+    text-transform: none;
+    width: max-content;
+    top: 88%;
+}
+
+.addFilmAfterGenre{
+    padding: 3px 7px 5px 7px;
+    font-size: 13px;
+    text-transform: none;
+    width: max-content;
+    top: 73%;
+} */
+
+button[type='submit']{
+    display: block;
+    border: none;
+    padding: 5px 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #2e2d2d;
+    background: linear-gradient(90deg, #fc9b46 0%, #fc7346 100%);
+}
+
+button[type='submit']:hover{
+    transform: scale(0.9);
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.message{
+    display: none;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    /* transition: color 5s ease-out; */
+    z-index: 25;
+}

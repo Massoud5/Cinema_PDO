@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg, #338285 0%, #47a0a3 20%, #42aaaa 40%, #42aaaa 50%, #47a0a3 80%, #338285 100%);
+    /* to resolve the problem of several position absolute child elements*/
+    background-attachment: fixed;
+}
+
+.home_icon{
+    width: 50px;
+    top: 30px;
+    left: 50px;
+    position: fixed;
+}
+.home_icon:hover{
+    transform: scale(.8);
+    transition: transform 0.3s ease;
+}
+
+h2{
+    font-family: 'Anton', sans-serif;
+    display: block;
+    color: #44b2b2;
+    font-size: 100px;
+    width: max-content;
+    position: absolute;
+    text-transform: uppercase;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,-50%);
+    z-index: -25;
+}
+
+.searchForm{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    display: flex;
+    height: 23px;
+    width: 210px;
+}
+#searchInput{
+    width: 300px;
+    background-color: #89d3df;
+    border: none;
+    border-radius: 3px;
+    color: #191a1b;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 3px 7px;
+    font-weight: bold;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#searchInput:hover{
+    background-color: #8bc9d3;
+}
+#searchInput:focus{
+    outline: none;
+}
+#searchSubmit{
+    margin: auto;
+    padding: 3px 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: block;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    color: #2e2d2d;
+    background: linear-gradient(90deg, #fc9b46 0%, #fc7346 100%);
+}
+#searchSubmit:hover{
+    transform: none;
+    opacity: .9;
+}
+
+.nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    height: 350px;
+    width: 1000px;
+}
+
+figure{
+    position: relative;
+    margin: auto 3%;
+}
+
+.nav-img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.overlay{
+    position: absolute; 
+    bottom: 0; 
+    background: #FFFFFFcc;
+    color: #e09155; 
+    text-shadow: black 1px 1px 1px;
+    width: 100%;
+    height: 45%;
+    transition: .3s ease;
+    opacity:0;
+    font-size: 20px;
+    padding-top:45%;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: -24;
+}
+
+figure:hover{
+    transform: translateY(-10px);
+    transition: .3s ease;
+}
+
+figure:hover .overlay{
+    opacity: 1;
+}
+
+figure:nth-of-type(5):hover .overlay{
+    background: #d83838cc;
+}
+
+.count-elements{
+    color: white;
+    text-align: center;
+    border-bottom: none;
+}
+
+.table-style{
+    border-collapse: collapse;
+    position: absolute;
+    left: 50%;
+    top: 10em;
+    transform: translateX(-50%);
+    width: 700px;
+}
+
+.specified-table-style{
+    top: 17em;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 0.7px solid #ddd;
+}
+
+.roles-table-style{
+    width: 400px;
+}
+
+.th-roles, .trbody-roles td{
+    text-align: center;
+}
+
+.trbody:hover{ 
+    background-color: #daa073;
+}
+
+.link:hover{
+    color: white;
+}
+
+.titleInDetails{
+    text-align: center;
+    margin-top: 5em;
+    font-size: 30px;
+    color: #e09155;
+    text-shadow: black 1px 1px 1px;
+}
+
+.details-section{
+    display: flex;
+    justify-content: space-around;
+    margin: 5em 10em 1em 10em;
+}
+
+.detailsList{
+    list-style-type: none;
+    width: 40%;
+}
+
+.detailsTable{
+    position: static;
+    transform: translate(0%,0%);
+    width: max-content;
+    height: max-content;
+}
+
+.icon-delete{
+    width: 12px;
+}
+
+.icon-delete:hover{
+    transform: scale(1.8);
+    transition: .3s ease;
+}
