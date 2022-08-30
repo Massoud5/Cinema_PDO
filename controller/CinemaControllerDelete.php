@@ -13,8 +13,6 @@ class CinemaControllerDelete {
 
         $dao = new DAO;
 
-        // $id = $_GET['id_acteur'];
-
         $sql1 = 'DELETE FROM casting
                 WHERE id_acteur = :id';
         
@@ -42,8 +40,6 @@ class CinemaControllerDelete {
 
         $dao = new DAO;
 
-        // $id = $_GET['id_acteur'];
-
         $sql1 = 'DELETE FROM casting
                 WHERE id_role = :id';
         
@@ -70,8 +66,6 @@ class CinemaControllerDelete {
     public function deleteFilm($id){
 
         $dao = new DAO;
-
-        // $id = $_GET['id_acteur'];
 
         $sql1 = 'DELETE FROM classer
                 WHERE id_film = :id';
