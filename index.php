@@ -32,6 +32,8 @@ if(isset($_GET['action'])){
     
     switch($_GET['action']){
         // chaque case contient une requête SQL
+        case "search" : $ctrlCinema->search();break;
+
         case "listFilms" : $ctrlCinema->findAllMovies();break;
         case "listActors" : $ctrlCinema->findAllActors();break;
         case "filmDetails" : $ctrlCinema->findFilmDetails($id);break;
@@ -57,6 +59,9 @@ if(isset($_GET['action'])){
         case "deleteActor" : $ctrlCinemaDelete->deleteActor($id);break;
         case "deleteRole" : $ctrlCinemaDelete->deleteRole($id);break;
         case "deleteFilm" : $ctrlCinemaDelete->deleteFilm($id);break;
+        
+
+
 
 
     }

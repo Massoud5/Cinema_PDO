@@ -31,16 +31,23 @@ label .input{
     font-weight: bold;
 }
 
+input[type=text]{
+    cursor: text;
+}
+
 label .input:hover{
-    background-color: #89d3df ;
+    background-color: #89d3df;
 }
 
 label .inputResume{
     height: 100px;
+    resize: none;
+    cursor: text;
 }
 
 label .centerInput{
     text-align: center;
+    cursor: pointer;
 }
 
 .labelSelect{
@@ -74,10 +81,6 @@ label .inputSelect2{
     transition: .3s ease;
     text-shadow: black 1px 1px 1px;
     font-weight: bold;
-}
-
-textarea{
-    resize: none;
 }
 
 .link-showForm{

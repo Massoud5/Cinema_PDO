@@ -15,6 +15,35 @@ class CinemaController {
         require "view/home.php";
     }
 
+    public function search(){
+
+        $dao = new DAO;
+
+        if($_POST['submit']){
+
+            $key = filter_input(INPUT_POST, "search", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            
+            if(!empty($key)){
+
+                $sql = 'SELECT * 
+                        FROM acteur a
+                        WHERE a.prenom
+                        LIKE :keyword
+                        OR a.nom
+                        LIKE :keyword';
+
+                $array=[':keyword' => '%'.$key.'%'];
+
+                $query = $dao -> executerRequete($sql, $array);
+                $results = $query -> fetchAll;
+                $rows = $query -> rowCount();
+    
+            }
+        }
+
+        require "view/searchResults.php";
+    }
+
     // fonction qui sert à faire une requête et justement trouver les données dans la 
     // base de donnée.
     public function findAllMovies() {

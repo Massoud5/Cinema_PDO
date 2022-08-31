@@ -64,6 +64,7 @@ h2{
 }
 #searchInput:hover{
     background-color: #8bc9d3;
+    cursor: text;
 }
 #searchInput:focus{
     outline: none;
