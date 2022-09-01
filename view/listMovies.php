@@ -5,6 +5,13 @@ ob_start();
 ?>
 <h2>All films</h2>
 
+<form class="searchForm" action="index.php?action=search" method="post">
+
+    <input id="searchInput" type="text" placeholder="Search for ..." name="key">
+    <button id="searchSubmit" type="submit" name="submitSearch">Search</button>
+
+</form>
+
 <table class="table-style">
     <tr>
         <th></th>

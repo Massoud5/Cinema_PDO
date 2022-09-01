@@ -3,7 +3,8 @@
 namespace Controller;
 
 // pour appeler l'étage spécifié d'une page
-use Model\DAO;                                                      
+use Model\DAO;
+use controller\CinemaControllerSearch;                                                       
 
 // class sans construct car elle sert juste à faire des appels
 class CinemaController {
@@ -15,38 +16,10 @@ class CinemaController {
         require "view/home.php";
     }
 
-    public function search(){
-
-        $dao = new DAO;
-
-        if($_POST['submit']){
-
-            $key = filter_input(INPUT_POST, "search", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-            
-            if(!empty($key)){
-
-                $sql = 'SELECT * 
-                        FROM acteur a
-                        WHERE a.prenom
-                        LIKE :keyword
-                        OR a.nom
-                        LIKE :keyword';
-
-                $array=[':keyword' => '%'.$key.'%'];
-
-                $query = $dao -> executerRequete($sql, $array);
-                $results = $query -> fetchAll;
-                $rows = $query -> rowCount();
-    
-            }
-        }
-
-        require "view/searchResults.php";
-    }
-
     // fonction qui sert à faire une requête et justement trouver les données dans la 
     // base de donnée.
-    public function findAllMovies() {
+    // l'argument est pour éléminer le bogue du formulaire search oû le $resultat devient undefined quand on submit à vide 
+    public function findAllMovies($results = null) {
 
         //instantier un object DAO pour avoir accés au PDO et ensuite la base de donné
         $dao = new DAO();
@@ -57,6 +30,7 @@ class CinemaController {
                 ON f.id_realisateur = r.id_realisateur';
         // pour accéder via l'object DAO instantié à la methode de celui_ci
         $films = $dao->executerRequete($sql);
+        $result = $results;
 
         require "view/listMovies.php";
     }

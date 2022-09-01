@@ -6,11 +6,13 @@ namespace App;
 use Controller\CinemaController;
 use Controller\CinemaControllerAdd;
 use Controller\CinemaControllerDelete;
+use Controller\CinemaControllerSearch;
 
 
 require "controller/CinemaController.php";
 require "controller/CinemaControllerAdd.php";
 require "controller/CinemaControllerDelete.php";
+require "controller/CinemaControllerSearch.php";
 
 
 
@@ -23,6 +25,7 @@ spl_autoload_register(function ($_className){
 $ctrlCinema = new CinemaController();
 $ctrlCinemaAdd = new CinemaControllerAdd();
 $ctrlCinemaDelete = new CinemaControllerDelete();
+$ctrlCinemaSearch = new CinemaControllerSearch();
 
 // pour se protéger des injections dans l'URL //! faille XSS
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -32,8 +35,6 @@ if(isset($_GET['action'])){
     
     switch($_GET['action']){
         // chaque case contient une requête SQL
-        case "search" : $ctrlCinema->search();break;
-
         case "listFilms" : $ctrlCinema->findAllMovies();break;
         case "listActors" : $ctrlCinema->findAllActors();break;
         case "filmDetails" : $ctrlCinema->findFilmDetails($id);break;
@@ -48,18 +49,19 @@ if(isset($_GET['action'])){
         case "showActorForm" : $ctrlCinema -> showActorForm();break;
         case "showRoleForm" : $ctrlCinema -> showRoleForm();break;
         case "showCastingForm" : $ctrlCinema -> showCastingForm();break;
-
+        
         case "addFilm" : $ctrlCinemaAdd->addFilm();break;
         case "addDirector" : $ctrlCinemaAdd->addDirector();break;
         case "addGenre" : $ctrlCinemaAdd->addGenre();break;
         case "addActor" : $ctrlCinemaAdd->addActor();break;
         case "addRole" : $ctrlCinemaAdd->addRole();break;
         case "insertCasting" : $ctrlCinemaAdd->insertCasting();break;
-
+        
         case "deleteActor" : $ctrlCinemaDelete->deleteActor($id);break;
         case "deleteRole" : $ctrlCinemaDelete->deleteRole($id);break;
         case "deleteFilm" : $ctrlCinemaDelete->deleteFilm($id);break;
         
+        case "search" : $ctrlCinemaSearch->search();break;
 
 
 

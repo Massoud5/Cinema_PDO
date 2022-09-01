@@ -6,15 +6,6 @@ ob_start();
 ?>
 
 <h2>home</h2>
-
-<form class="searchForm" action="index.php?action=search" method="post">
-
-    <input id="searchInput" type="text" placeholder="Search for ..." name="key">
-    <button id="searchSubmit" type="submit" name="submit">Search</button>
-
-</form>
-
-
     
 <nav class="nav-tabs">
 
