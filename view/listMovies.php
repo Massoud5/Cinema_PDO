@@ -7,7 +7,7 @@ ob_start();
 
 <form class="searchForm" action="index.php?action=search" method="post">
 
-    <input id="searchInput" type="text" placeholder="Search for ..." name="key">
+    <input id="searchInput" type="text" placeholder="film, date ou genre" name="key">
     <button id="searchSubmit" type="submit" name="submitSearch">Search</button>
 
 </form>
