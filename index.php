@@ -8,6 +8,7 @@ use Controller\CinemaControllerAdd;
 use Controller\CinemaControllerDelete;
 use Controller\CinemaControllerSearch;
 
+// hello 
 
 require "controller/CinemaController.php";
 require "controller/CinemaControllerAdd.php";
