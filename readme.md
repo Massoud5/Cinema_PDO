@@ -22,10 +22,19 @@ The Cinema project is a web application built with PHP and PHP Data Objects (PDO
 
 ### Installation
 
-1. Clone the repository:
+Clone the repository:
 ```shell
 git clone git@github.com:Massoud5/Cinema_PDO.git
 ```
+
+### Running the application
+
+1. Navigate to the project directory: `cd GATTINO`
+2. Start your local development server:
+``` shell
+php -S localhost:8000
+```
+3. Access the application through your web browser: `http://localhost:8000`
 
 ## License
 
